@@ -1,1 +1,1 @@
-web: gunicorn eastvantage.wsgi
+web: gunicorn eastvantage.wsgi --log-file -
