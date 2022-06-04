@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-8e&=)4h9vco9i(=q$u3xmg!%^l3#2%y!la#!h^feyvqwxp^sgw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["https://eastvantage-address-book.herokuapp.com","127.0.0.1:8000"]
 
 
 # Application definition
