@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-8e&=)4h9vco9i(=q$u3xmg!%^l3#2%y!la#!h^feyvqwxp^sgw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://eastvantage-address-book.herokuapp.com/"','127.0.0.1','localhost']
+ALLOWED_HOSTS = ['eastvantage-address-book.herokuapp.com"','*']
 
 
 # Application definition
@@ -126,4 +126,7 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
+import dj_database_url 
+prod_db  =  dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(prod_db)
